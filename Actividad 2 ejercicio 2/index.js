@@ -1,36 +1,76 @@
 let boton = document.getElementById("form--button");
 boton.addEventListener('click', () => {
+    let maxNumFunc = () => {
+        array1.forEach(numero => {
+            for(let element of array1){
+                if(numero > element){
+                    if(maxNum == undefined){
+                        maxNum = numero
+                    }
 
-    let minMax = (num) => {
-        if(num < minNum){
-            minNum = num;
-        }
+                    else{
+                        if(numero < maxNum){
+                            maxNum = numero;
+                        }
+                    }
+                }
     
-        else if(num > maxNum)
-        {
-            maxNum = num; 
-        }
+                else if(element > numero){
+                    if(maxNum == undefined){
+                        maxNum = element
+                    }
+                }
+                
+                    else{
+                        if(element > maxNum){
+                            maxNum = element;
+                        }
+                    }
+            }
+        })
     }
 
+    let minNumFunc = () => {
+        array1.forEach(numero => {
+            for(let element of array1){
+                if(element > numero){
+                    if(minNum == undefined){
+                        minNum = numero
+                    }
+                    
+                    else{
+                        if(minNum > numero){
+                            minNum = numero;
+                        }
+                    }
+                }
+    
+                else if(numero > element){
+                    if(minNum == undefined){
+                        minNum = element
+                    }
+                    
+                    else{
+                        if(element < minNum){
+                            minNum = element;
+                        }
+                    }
+                
+                }
+            }
+        })
+
+    }
+
+
     let A,B,C,D;
-    let maxNum,minNum;
+    let minNum; 
+    let maxNum;
     A = document.getElementById("form--valor1").value;
-    maxNum = A;
-    minNum = A;
-
     B = document.getElementById("form--valor2").value;
-    minMax(B)
-    
-    
-
     C = document.getElementById("form--valor3").value;
-    minMax(C)
-   
     D = document.getElementById("form--valor4").value;
-    minMax(D)
-
     let array1 = [A,B,C,D];
-
 
     array1.forEach((elem, index) => {
         for(let element of array1){
@@ -42,7 +82,8 @@ boton.addEventListener('click', () => {
         }    
     });
     
-    
+    minNumFunc();
+    maxNumFunc();
 
     alert(`El número mayor es ${maxNum} y el número menor es ${minNum}`)
 })
