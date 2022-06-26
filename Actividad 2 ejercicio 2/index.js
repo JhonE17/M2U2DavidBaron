@@ -14,39 +14,36 @@ boton.addEventListener('click', () => {
 
     function maxNumChecker(){
         array1.forEach(numberToCheck => {
-            for(let element of array1){
-                if(numberToCheck > element){
-                    if(numberToCheck > max){
-                        max = numberToCheck;
-                    }
-                }
-            }    
+            if(numberToCheck > max){
+                max = numberToCheck;
+            }  
         });
     }
 
     function minNumChecker(){
         array1.forEach(numberToCheck => {
-            for(let element of array1){
-                if(numberToCheck < element){
-                    if(numberToCheck < min){
-                        min = numberToCheck;
-                    }
-                }
-            }    
+            if(numberToCheck < min){
+                min = numberToCheck;
+            }     
         });
     }
 
-    let A,B,C,D;
-    A = document.getElementById("form--valor1").value;
-    B = document.getElementById("form--valor2").value;
-    C = document.getElementById("form--valor3").value;
-    D = document.getElementById("form--valor4").value;
-    let array1 = [A,B,C,D];
-    let max = array1[0];
-    let min = array1[0];
+    let a,b,c,d;
+    let array1 = [] // 2,234,3,43
+    a = document.querySelector("#form--valor1").value;
+    array1.push(parseInt(a)) 
+    b = document.querySelector("#form--valor2").value;
+    array1.push(parseInt(b))
+    c = document.querySelector("#form--valor3").value;
+    array1.push(parseInt(c))
+    d = document.querySelector("#form--valor4").value;
+    // console.log(d)
+    array1.push(parseInt(d))
+    let max = 0;
+    maxNumChecker();
+    let min = max;
 
     equalNumChecker();
-    maxNumChecker();
     minNumChecker();
     
     
