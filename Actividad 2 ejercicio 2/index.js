@@ -1,89 +1,56 @@
 let boton = document.getElementById("form--button");
 boton.addEventListener('click', () => {
-    let maxNumFunc = () => {
-        array1.forEach(numero => {
+    function equalNumChecker(){
+        array1.forEach((elem, index) => {
             for(let element of array1){
-                if(numero > element){
-                    if(maxNum == undefined){
-                        maxNum = numero
-                    }
-
-                    else{
-                        if(numero < maxNum){
-                            maxNum = numero;
-                        }
-                    }
+                index++
+                if(element == array1[index]){
+                    alert("Hay valores iguales");
+                    break
                 }
-    
-                else if(element > numero){
-                    if(maxNum == undefined){
-                        maxNum = element
-                    }
-                }
-                
-                    else{
-                        if(element > maxNum){
-                            maxNum = element;
-                        }
-                    }
-            }
-        })
+            }    
+        });
     }
 
-    let minNumFunc = () => {
-        array1.forEach(numero => {
+    function maxNumChecker(){
+        array1.forEach(numberToCheck => {
             for(let element of array1){
-                if(element > numero){
-                    if(minNum == undefined){
-                        minNum = numero
-                    }
-                    
-                    else{
-                        if(minNum > numero){
-                            minNum = numero;
-                        }
+                if(numberToCheck > element){
+                    if(numberToCheck > max){
+                        max = numberToCheck;
                     }
                 }
-    
-                else if(numero > element){
-                    if(minNum == undefined){
-                        minNum = element
-                    }
-                    
-                    else{
-                        if(element < minNum){
-                            minNum = element;
-                        }
-                    }
-                
-                }
-            }
-        })
-
+            }    
+        });
     }
 
+    function minNumChecker(){
+        array1.forEach(numberToCheck => {
+            for(let element of array1){
+                if(numberToCheck < element){
+                    if(numberToCheck < min){
+                        min = numberToCheck;
+                    }
+                }
+            }    
+        });
+    }
 
     let A,B,C,D;
-    let minNum; 
-    let maxNum;
     A = document.getElementById("form--valor1").value;
     B = document.getElementById("form--valor2").value;
     C = document.getElementById("form--valor3").value;
     D = document.getElementById("form--valor4").value;
     let array1 = [A,B,C,D];
+    let max = array1[0];
+    let min = array1[0];
 
-    array1.forEach((elem, index) => {
-        for(let element of array1){
-            index++
-            if(element == array1[index]){
-                alert("Hay valores iguales");
-                break
-            }
-        }    
-    });
+    equalNumChecker();
+    maxNumChecker();
+    minNumChecker();
     
-    minNumFunc();
-    maxNumFunc();
+    
+    
 
-    alert(`El número mayor es ${maxNum} y el número menor es ${minNum}`)
+    alert(`El número mayor es ${max} y el número menor es ${min}`)
 })
