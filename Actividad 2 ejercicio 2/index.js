@@ -31,14 +31,14 @@ boton.addEventListener('click', () => {
     let a,b,c,d;
     let array1 = [] // 2,234,3,43
     a = document.querySelector("#form--valor1").value;
-    array1.push(parseInt(a)) 
+    array1.push(a) 
     b = document.querySelector("#form--valor2").value;
-    array1.push(parseInt(b))
+    array1.push(b)
     c = document.querySelector("#form--valor3").value;
-    array1.push(parseInt(c))
+    array1.push(c)
     d = document.querySelector("#form--valor4").value;
     // console.log(d)
-    array1.push(parseInt(d))
+    array1.push(d)
     let max = 0;
     maxNumChecker();
     let min = max;
