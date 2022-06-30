@@ -4,29 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/Actividad 2 ejercicio 1/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Montserrat:ital,wght@0,300;0,500;1,100;1,300&family=Oswald:wght@200;300;500;600&display=swap" rel="stylesheet">
     <title>Ejercicio 1</title>
 </head>
 <body>
-    <div>
-        <h1>¿Cuánto es el valor de mis materias?</h1>
-
-        <br>
-        <label for="form--nombre">Ingresa tu nombre</label>
-        <input type="text" id="form--nombre" placeholder="nombre">
-        
-        <br>
-
-        <br>
-        <label for="form--materias">Ingresa la cantidad de materias</label>
-        <input type="number" id="form--materias" placeholder="# de materias acá">
-        <br>
-        <button id="form--button">Envíar</button>
-    </div>
-
-    <script src="./index.js"></script>
-</body>
+    <section id="body--container">
+        <section id="container--main-section">
+            <h1>¿Cuánto es el valor de mis materias?</h1>
+            <div id="pornombrar">
+                    <br>
+                    <div class="main-section--items">
+                        <label for="form--nombre" class="labels">Ingresa tu nombre</label>
+                        <input type="text" id="form--nombre" >
+                    </div>
+                    <br>
+                    <div class="main-section--items">
+                        <label for="form--materia" class="labels">Ingresa la materia que deseas añadir</label>
+                        <input type="text" id="form--materia" >        
+                    </div>
+                    <br>
+                    <div class="main-section--items">
+                        <label for="form--valor-materia" class="labels">Ingresa el valor de la materia</label>
+                        <input type="number" id="form--valor-materia">
+                </div>
+                <br>
+            </div>
+            <button id="form--button">Envíar</button>
+        </section>
+        <section id="container--table-display">
+            <table id="table--materias">
+            </table>
+            <table id="table--valor">
+            </table>
+            <button id="button--calcular">Calcular</button>
+        </section>
+    </section>
+        <script src="./index.js"></script>
+    </body>
 </html>

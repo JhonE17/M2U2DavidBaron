@@ -18,57 +18,127 @@ body{
     justify-content: center;
 }
 
-div{
-    background-color: #DCD7C9;
-    width: 50%;
-    height: 50%;
-    border: 1px solid black;
-    border-radius: 30px;
+#body--container{
+    display: flex;
+    align-items: center;
+}
+
+h1{
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.main-section--items{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#container--main-section{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 10px 10px 10px black;
+    height: 50vh;
+    width: 80vh;
+    background-color: #ECE5C7;
+    padding: 30px;
+    border: 1px solid #354259;
+    border-radius: 50px;
 }
 
-h1{
-    color: #2C3639;
-    font-size: 3rem;
-    margin-bottom: 20px;
-    font-weight: 500;
+#container--table-display{
+    height: 23vh;
+    width: 15vw;
+    background-color: #CDC2AE;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #354259;
+    border-radius: 30px;
+    margin-left: 5px;
+}
+
+#table--materias, .table--item{
+    border: 1px solid black;
+    border-collapse: collapse; 
+    background-color: #C2DED1;
+    color: #354259;
     text-align: center;
 }
 
-#form--nombre, #form--materias{
-    width: 200px;
-}
-
-label{
-    color: #3F4E4F;
-    font-size: 1.5rem;
-    font-weight: 500;
+#table--materias{
+    width: 300px;
     margin-bottom: 10px;
 }
 
+.table--item{
+    font-size: 2rem;
+    padding: 3px;
+}
+
+#table--valor{
+    margin-top: 10px;
+}
+
+.labels{
+    font-size: 2rem;
+}
+
 #form--button{
-    background-color: #2C3639;
-    color: #DCD7C9;
-    width:100px;
-    height:35px;
-    margin-top:10px;
-    border: transparent;
-    border-radius: 30px;
-}
-#form--button:hover{
-    background-color: white;
-    color: #2C3639;
-    border: 1px solid black;
-}
-
-#form--nombre, #form--materias::placeholder{
-    color: grey;
+    background-color: #EA4C89;
+    border-radius: 8px;
+    border-style: none;
+    color: #FFFFFF;
+    cursor: pointer;
     text-align: center;
-    font-style: italic;
-    font-weight: 100;
+    text-decoration: none;
+    transition: color 100ms;
+    touch-action: manipulation;
+    height: 30px;
+    width: 150px;
+    margin-top: 20px;
 }
 
+#form--button:hover,
+#form--button:focus {
+    background-color: #F082AC;
+}
+
+#pornombrar{
+    width: 750px;
+}
+
+#button--calcular{
+    background-color: #EA4C89;
+    border-radius: 8px;
+    border-style: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: color 100ms;
+    touch-action: manipulation;
+    height: 30px;
+    width: 80px;
+}
+
+#button--calcular:hover,
+#button--calcular:focus {
+  background-color: #F082AC;
+}
+
+#table--valor{
+    margin-bottom: 5px;
+}
+
+.output{
+    display: inline-block;
+    font-size: 2.5rem;
+    text-align: center;
+    background-color: #354259;
+    color: #C2DED1;
+    border-radius: 20px;
+}
